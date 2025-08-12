@@ -1,7 +1,7 @@
 import { IsNotEmpty } from "class-validator";
 import { Column, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
-@Entity({name: "db_projeto_final_bloco_02"})
+@Entity({name: "tb_categoria"})
 export class Categoria {
     @PrimaryGeneratedColumn()
     id: number;
