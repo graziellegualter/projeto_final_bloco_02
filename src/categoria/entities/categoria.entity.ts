@@ -1,5 +1,6 @@
 import { IsNotEmpty } from "class-validator";
-import { Column, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Produto } from "../../produto/entities/produto.entity";
 
 @Entity({name: "tb_categoria"})
 export class Categoria {
@@ -17,5 +18,9 @@ export class Categoria {
     @UpdateDateColumn()
     dataEntrada: Date;
 
+    @OneToMany(()=> Produto, (produto) => produto.categoria)
+    produto: Produto[]
+   
+   
 
 }

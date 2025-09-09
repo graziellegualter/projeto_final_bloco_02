@@ -21,7 +21,7 @@ export class CategoriaController {
     @Get('/nome/:nome')
     @HttpCode(HttpStatus.OK)
     findByNome(@Param('nome') nome: string): Promise<Categoria[]> {
-        return this.categoriaService.finByNome(nome);
+        return this.categoriaService.findByNome(nome);
     }
 
     @Post()
